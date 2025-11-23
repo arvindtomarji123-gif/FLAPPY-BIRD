@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flappy Bird Clone</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="bird"></div>
+        <div id="score">0</div>
+        
+        <div id="message">
+            <img src="https://i.ibb.co/v4PQxTQ0/Flappy-Bird-Transparent.png" alt="Flappy Bird Logo" style="width: 100%; display: block; margin-bottom: 10px;">
+            
+            <img src="https://i.ibb.co/6cxPvyZc/Start-button-sprite.png" alt="Tap or Space to Start" style="display: block; width: 150px; margin: 20px auto 0 auto;">
+            
+        </div>
+
+        <div id="ground"></div>
+
+    </div>
+
+    <audio id="sound-wing" preload="auto">
+        <source src="https://www.dl.dropboxusercontent.com/s/72a1v9y06k46s96/wing.wav?dl=0" type="audio/wav">
+    </audio>
+    <audio id="sound-hit" preload="auto">
+        <source src="https://www.dl.dropboxusercontent.com/s/e542p7j3r7nffxw/hit.wav?dl=0" type="audio/wav">
+    </audio>
+    <audio id="sound-point" preload="auto">
+        <source src="https://www.dl.dropboxusercontent.com/s/pwxu78z2m0c2l6v/point.wav?dl=0" type="audio/wav">
+    </audio>
+
+    <script src="game.js"></script>
+</body>
+</html>

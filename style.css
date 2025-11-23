@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333; 
+    overflow: hidden; 
+    font-family: sans-serif;
+}
+
+#game-container {
+    width: 400px;
+    height: 600px;
+    /* Hosted Background URL */
+    background-image: url('https://raw.githubusercontent.com/samuelcust/flappy-bird-assets/master/sprites/background-day.png');
+    background-size: cover;
+    border: 3px solid #000;
+    position: relative;
+    overflow: hidden; 
+    touch-action: manipulation; 
+}
+
+#bird {
+    width: 40px; 
+    height: 30px; 
+    /* Hosted Bird URL */
+    background-image: url('https://i.ibb.co/s9vpWgD4/bird-gif.gif'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    z-index: 10;
+}
+
+.pipe {
+    position: absolute;
+    width: 52px;
+    /* Hosted Pipe URL */
+    background-image: url('https://i.ibb.co/NdrhXpcz/38-388476-flappy-bird-pipes-png-bottle.png');
+    background-size: 100% 100%; 
+    z-index: 5;
+}
+
+.pipe-top {
+    transform: scaleY(-1);
+}
+
+.pipe-bottom {
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Using Hosted Pixel Font */
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 32px; 
+    color: white; 
+    
+    -webkit-text-stroke: 1px black; 
+    text-shadow: 4px 4px 0px #000;
+    font-weight: bold;
+    
+    z-index: 20;
+}
+
+#ground {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    /* Hosted Ground URL */
+    background-image: url('https://raw.githubusercontent.com/samuelcust/flappy-bird-assets/master/sprites/base.png');
+    background-size: auto 100px;
+    background-repeat: repeat-x;
+    z-index: 15;
+}
+
+#message {
+    position: absolute;
+    /* लोगो को ऊपर करने के लिए: 40% */
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 30;
+    width: 200px;
+}
+
+/* #message p styling is removed as the start button is now an image */
